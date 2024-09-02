@@ -2,6 +2,7 @@ module Tests
 
 open Xunit
 open TestProject.Twin
+open TestProject.Palindrome
     
 [<Fact>]
 let rec ``Twin 4`` () =
@@ -26,3 +27,19 @@ let rec ``Twin 3`` () =
     let arr = [3; 4; 6; 7; 6]
     let result = twinFn arr
     Assert.Equal(Some 3, result)
+    
+[<Fact>]
+let rec ``Almost Palindrome 1`` () =
+    Assert.True(almostPalindromeFn "abcdcbg")
+ 
+[<Fact>]
+let rec ``Almost Palindrome 2`` () =
+    Assert.True(almostPalindromeFn "abccia")   
+    
+[<Fact>]
+let rec ``Almost Palindrome 3`` () =
+    Assert.False(almostPalindromeFn "abcdaaa")
+ 
+[<Fact>]
+let rec ``Almost Palindrome 4`` () =
+    Assert.False(almostPalindromeFn "1234312")  
