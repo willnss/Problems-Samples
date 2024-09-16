@@ -12,6 +12,7 @@
     <ItemGroup>
         <Compile Include="Twin.fs" />
         <Compile Include="Palindrome.fs" />
+        <Compile Include="RotateTransform.fs" />
         <Compile Include="Tests.fs"/>
         <Compile Include="Program.fs"/>
     </ItemGroup>
