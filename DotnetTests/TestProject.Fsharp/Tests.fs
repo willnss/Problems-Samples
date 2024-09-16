@@ -63,21 +63,21 @@ let areEqualArrays (arr1: int[][]) (arr2: int[][]) =
         Array.forall2 (fun row1 row2 -> Array.forall2 (=) row1 row2) arr1 arr2
 
 [<Fact>]
-let ``Test 1: Rotate 2x2 matrix clockwise once`` () =
+let ``RotateTransform 1: Rotate 2x2 matrix clockwise once`` () =
     let input = toArray2D [[2; 4]; [0; 0]]
     let expected = toArray2D [[0; 2]; [0; 4]]
     let result = rotateTransform input 1
     areEqualArrays expected result |> Assert.True
 
 [<Fact>]
-let ``Test 2: Rotate 2x2 matrix counterclockwise once`` () =
+let ``RotateTransform 2: Rotate 2x2 matrix counterclockwise once`` () =
     let input = toArray2D [[2; 4]; [0; 0]]
     let expected = toArray2D [[4; 0]; [2; 0]]
     let result = rotateTransform input -1
     areEqualArrays expected result |> Assert.True
 
 [<Fact>]
-let ``Test 3: Rotate 4x4 matrix clockwise twice`` () =
+let ``RotateTransform 3: Rotate 4x4 matrix clockwise twice`` () =
     let input = toArray2D [
         [1; 4; 0; 0];
         [2; 8; 0; 0];
@@ -94,7 +94,7 @@ let ``Test 3: Rotate 4x4 matrix clockwise twice`` () =
     areEqualArrays expected result |> Assert.True
 
 [<Fact>]
-let ``Test 4: Rotate 4x4 matrix counterclockwise twice`` () =
+let ``RotateTransform 4: Rotate 4x4 matrix counterclockwise twice`` () =
     let input = toArray2D [
         [4; 3; 1; 2];
         [2; 1; 3; 4];
@@ -111,7 +111,7 @@ let ``Test 4: Rotate 4x4 matrix counterclockwise twice`` () =
     areEqualArrays expected result |> Assert.True
 
 [<Fact>]
-let ``Test 5: Rotate 6x6 matrix clockwise five times`` () =
+let ``RotateTransform 5: Rotate 6x6 matrix clockwise five times`` () =
     let input = toArray2D [
         [2; 3; 5; 0; 0; 0];
         [1; 7; 1; 0; 0; 0];
